@@ -1,0 +1,220 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#0e1726" />
+      <stop offset="100%" stop-color="#0f233a" />
+    </linearGradient>
+
+    <!-- Brand Gradients -->
+    <linearGradient id="emeraldGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+
+    <linearGradient id="cyanAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+
+    <linearGradient id="violetAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#151e2e" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#0c1322" stop-opacity="0.98" />
+    </linearGradient>
+
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="675" fill="url(#bgGrad)" />
+
+  <!-- Ambient Glow Circles -->
+  <circle cx="180" cy="120" r="160" fill="#10b981" opacity="0.1" filter="blur(60px)" />
+  <circle cx="1020" cy="480" r="200" fill="#06b6d4" opacity="0.1" filter="blur(70px)" />
+  <circle cx="600" cy="300" r="180" fill="#6366f1" opacity="0.08" filter="blur(70px)" />
+
+  <!-- Header Section -->
+  <g transform="translate(60, 45)">
+    <!-- Badge -->
+    <rect x="0" y="0" width="260" height="26" rx="13" fill="#10b981" fill-opacity="0.18" stroke="#34d399" stroke-opacity="0.4" stroke-width="1"/>
+    <text x="14" y="17" fill="#6ee7b7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="1">MERN FINTECH &amp; SAAS BILLING ENGINE</text>
+
+    <!-- Main Title -->
+    <text x="0" y="60" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="32" font-weight="900" letter-spacing="-0.5">
+      BillFlow Architecture &amp; Billing Pipeline 💳⚡
+    </text>
+    <text x="0" y="86" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="400">
+      Subscription lifecycle, mathematical proration, metered overages, cryptographic webhooks &amp; real-time SaaS metrics
+    </text>
+  </g>
+
+  <!-- Card 1: Ingestion & Gateway Tier (Left) -->
+  <g transform="translate(60, 160)" filter="url(#shadow)">
+    <rect width="330" height="420" rx="18" fill="url(#cardGrad)" stroke="#1e293b" stroke-width="1.5" />
+    
+    <!-- Header -->
+    <rect x="0" y="0" width="330" height="52" rx="18" fill="#131c2e" />
+    <circle cx="26" cy="26" r="9" fill="#10b981" />
+    <text x="44" y="31" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="13" font-weight="700">1. Ingestion &amp; API Gateway</text>
+
+    <!-- Items -->
+    <g transform="translate(20, 72)" font-family="-apple-system, sans-serif">
+      <text x="0" y="0" fill="#34d399" font-size="10" font-weight="700" letter-spacing="0.5">MIDDLEWARE &amp; DISPATCH</text>
+      
+      <g transform="translate(0, 16)">
+        <rect x="0" y="0" width="290" height="58" rx="8" fill="#0a101d" stroke="#1e293b" stroke-width="1"/>
+        <text x="12" y="20" fill="#f8fafc" font-size="12" font-weight="600">Request Tracer &amp; Observability</text>
+        <text x="12" y="36" fill="#64748b" font-family="monospace" font-size="10">X-Request-Id + X-Response-Time</text>
+        <text x="12" y="48" fill="#94a3b8" font-size="9">Sub-millisecond latency audit headers</text>
+      </g>
+
+      <g transform="translate(0, 84)">
+        <rect x="0" y="0" width="290" height="58" rx="8" fill="#0a101d" stroke="#1e293b" stroke-width="1"/>
+        <text x="12" y="20" fill="#f8fafc" font-size="12" font-weight="600">Sliding Rate Limiter &amp; Auth Guard</text>
+        <text x="12" y="36" fill="#64748b" font-family="monospace" font-size="10">X-RateLimit-* / Bearer / API Key</text>
+        <text x="12" y="48" fill="#94a3b8" font-size="9">Quota enforcement &amp; brute-force protection</text>
+      </g>
+
+      <g transform="translate(0, 152)">
+        <rect x="0" y="0" width="290" height="58" rx="8" fill="#0a101d" stroke="#1e293b" stroke-width="1"/>
+        <text x="12" y="20" fill="#f8fafc" font-size="12" font-weight="600">High-Throughput Meter Ingestion</text>
+        <text x="12" y="36" fill="#64748b" font-family="monospace" font-size="10">POST /api/v1/usage (api_calls, gb)</text>
+        <text x="12" y="48" fill="#94a3b8" font-size="9">Deduplication via idempotency keys</text>
+      </g>
+
+      <g transform="translate(0, 220)">
+        <rect x="0" y="0" width="290" height="58" rx="8" fill="#0a101d" stroke="#1e293b" stroke-width="1"/>
+        <text x="12" y="20" fill="#f8fafc" font-size="12" font-weight="600">Customer &amp; Plan Management</text>
+        <text x="12" y="36" fill="#64748b" font-family="monospace" font-size="10">/api/v1/plans • /api/v1/customers</text>
+        <text x="12" y="48" fill="#94a3b8" font-size="9">Tier definitions &amp; account wallet credits</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Flow Arrows (1 -> 2) -->
+  <g transform="translate(400, 355)">
+    <line x1="0" y1="0" x2="30" y2="0" stroke="#10b981" stroke-width="2" stroke-dasharray="3 3" />
+    <polygon points="30,0 22,-4 22,4" fill="#10b981" />
+  </g>
+
+  <!-- Card 2: Core Billing & Calculation Engines (Middle) -->
+  <g transform="translate(435, 160)" filter="url(#shadow)">
+    <rect width="330" height="420" rx="18" fill="url(#cardGrad)" stroke="#1e293b" stroke-width="1.5" />
+    
+    <!-- Header -->
+    <rect x="0" y="0" width="330" height="52" rx="18" fill="#131c2e" />
+    <circle cx="26" cy="26" r="9" fill="#06b6d4" />
+    <text x="44" y="31" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="13" font-weight="700">2. Core Business Engines</text>
+
+    <!-- Items -->
+    <g transform="translate(20, 72)" font-family="-apple-system, sans-serif">
+      <text x="0" y="0" fill="#38bdf8" font-size="10" font-weight="700" letter-spacing="0.5">MATHEMATICAL LOGIC</text>
+      
+      <g transform="translate(0, 16)">
+        <rect x="0" y="0" width="290" height="58" rx="8" fill="#0a101d" stroke="#1e293b" stroke-width="1"/>
+        <text x="12" y="20" fill="#38bdf8" font-size="12" font-weight="600">Mathematical Proration Engine</text>
+        <text x="12" y="36" fill="#64748b" font-family="monospace" font-size="10">Δ = (NewCost × t/T) - (OldCost × t/T)</text>
+        <text x="12" y="48" fill="#94a3b8" font-size="9">Instant preview quotes &amp; prorated invoicing</text>
+      </g>
+
+      <g transform="translate(0, 84)">
+        <rect x="0" y="0" width="290" height="58" rx="8" fill="#0a101d" stroke="#1e293b" stroke-width="1"/>
+        <text x="12" y="20" fill="#38bdf8" font-size="12" font-weight="600">Metered Usage &amp; Overage Engine</text>
+        <text x="12" y="36" fill="#64748b" font-family="monospace" font-size="10">Overage = max(0, Units - PlanQuota) × Rate</text>
+        <text x="12" y="48" fill="#94a3b8" font-size="9">Real-time tiered aggregation per billing cycle</text>
+      </g>
+
+      <g transform="translate(0, 152)">
+        <rect x="0" y="0" width="290" height="58" rx="8" fill="#0a101d" stroke="#1e293b" stroke-width="1"/>
+        <text x="12" y="20" fill="#38bdf8" font-size="12" font-weight="600">Invoicing &amp; Regional Taxation</text>
+        <text x="12" y="36" fill="#64748b" font-family="monospace" font-size="10">INV-YYYY-XXXXX • State Tax / VAT / GST</text>
+        <text x="12" y="48" fill="#94a3b8" font-size="9">Lifecycle: draft ➔ open ➔ paid ➔ void</text>
+      </g>
+
+      <g transform="translate(0, 220)">
+        <rect x="0" y="0" width="290" height="58" rx="8" fill="#0a101d" stroke="#1e293b" stroke-width="1"/>
+        <text x="12" y="20" fill="#38bdf8" font-size="12" font-weight="600">Cryptographic Webhook Pipeline</text>
+        <text x="12" y="36" fill="#64748b" font-family="monospace" font-size="10">HMAC-SHA256 (timingSafeEqual)</text>
+        <text x="12" y="48" fill="#94a3b8" font-size="9">Replay protection &amp; automated payment transitions</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Flow Arrows (2 -> 3) -->
+  <g transform="translate(775, 355)">
+    <line x1="0" y1="0" x2="30" y2="0" stroke="#06b6d4" stroke-width="2" stroke-dasharray="3 3" />
+    <polygon points="30,0 22,-4 22,4" fill="#06b6d4" />
+  </g>
+
+  <!-- Card 3: Metrics & Persistence (Right) -->
+  <g transform="translate(810, 160)" filter="url(#shadow)">
+    <rect width="330" height="420" rx="18" fill="url(#cardGrad)" stroke="#1e293b" stroke-width="1.5" />
+    
+    <!-- Header -->
+    <rect x="0" y="0" width="330" height="52" rx="18" fill="#131c2e" />
+    <circle cx="26" cy="26" r="9" fill="#8b5cf6" />
+    <text x="44" y="31" fill="#ffffff" font-family="-apple-system, sans-serif" font-size="13" font-weight="700">3. Analytics &amp; Resilience</text>
+
+    <!-- Items -->
+    <g transform="translate(20, 72)" font-family="-apple-system, sans-serif">
+      <text x="0" y="0" fill="#a78bfa" font-size="10" font-weight="700" letter-spacing="0.5">SaaS INTELLIGENCE &amp; STORAGE</text>
+      
+      <g transform="translate(0, 16)">
+        <rect x="0" y="0" width="290" height="58" rx="8" fill="#0a101d" stroke="#1e293b" stroke-width="1"/>
+        <text x="12" y="20" fill="#a78bfa" font-size="12" font-weight="600">Real-Time SaaS Revenue Analytics</text>
+        <text x="12" y="36" fill="#64748b" font-family="monospace" font-size="10">MRR • ARR • ARPU • Churn Rate • LTV</text>
+        <text x="12" y="48" fill="#94a3b8" font-size="9">Normalized monthly &amp; annualized cohorts</text>
+      </g>
+
+      <g transform="translate(0, 84)">
+        <rect x="0" y="0" width="290" height="58" rx="8" fill="#0a101d" stroke="#1e293b" stroke-width="1"/>
+        <text x="12" y="20" fill="#a78bfa" font-size="12" font-weight="600">Dual-Mode Persistence Architecture</text>
+        <text x="12" y="36" fill="#64748b" font-family="monospace" font-size="10">MongoDB 7.0 + In-Memory Fallback</text>
+        <text x="12" y="48" fill="#94a3b8" font-size="9">Zero DB requirement for ultra-fast local testing</text>
+      </g>
+
+      <g transform="translate(0, 152)">
+        <rect x="0" y="0" width="290" height="58" rx="8" fill="#0a101d" stroke="#1e293b" stroke-width="1"/>
+        <text x="12" y="20" fill="#a78bfa" font-size="12" font-weight="600">Automated Test Verification</text>
+        <text x="12" y="36" fill="#64748b" font-family="monospace" font-size="10">36 Tests | 0 Failures | ~360ms</text>
+        <text x="12" y="48" fill="#94a3b8" font-size="9">Native Node.js test runner (node --test)</text>
+      </g>
+
+      <g transform="translate(0, 220)">
+        <rect x="0" y="0" width="290" height="58" rx="8" fill="#0a101d" stroke="#1e293b" stroke-width="1"/>
+        <text x="12" y="20" fill="#a78bfa" font-size="12" font-weight="600">Production Docker &amp; CI/CD</text>
+        <text x="12" y="36" fill="#64748b" font-family="monospace" font-size="10">Multi-stage Alpine + GitHub Actions</text>
+        <text x="12" y="48" fill="#94a3b8" font-size="9">Docker Compose port 5002 orchestration</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Bottom Metric Bar -->
+  <g transform="translate(60, 600)">
+    <rect width="1080" height="42" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+    
+    <g transform="translate(24, 25)" font-family="-apple-system, sans-serif" font-size="11">
+      <circle cx="0" cy="-4" r="4" fill="#10b981" />
+      <text x="10" y="0" fill="#f8fafc" font-weight="700">36 Passing Tests (360ms)</text>
+      
+      <circle cx="210" cy="-4" r="4" fill="#06b6d4" />
+      <text x="220" y="0" fill="#94a3b8">Zero-Dependency In-Memory Store</text>
+
+      <circle cx="470" cy="-4" r="4" fill="#8b5cf6" />
+      <text x="480" y="0" fill="#94a3b8">HMAC-SHA256 Webhook Security</text>
+
+      <circle cx="730" cy="-4" r="4" fill="#34d399" />
+      <text x="740" y="0" fill="#94a3b8">Docker Compose Ready (:5002)</text>
+
+      <text x="960" y="0" fill="#38bdf8" font-family="monospace" font-weight="700">Jeevan-a10/billflow-api</text>
+    </g>
+  </g>
+</svg>
