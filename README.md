@@ -3,9 +3,13 @@
 > High-throughput SaaS subscription billing, metered usage tracking, proration, and invoice generation engine built on the MERN stack (Node.js, Express, MongoDB).
 
 [![BillFlow API CI](https://github.com/Jeevan-a10/billflow-api/actions/workflows/ci.yml/badge.svg)](https://github.com/Jeevan-a10/billflow-api/actions/workflows/ci.yml)
+[![Live on Render](https://img.shields.io/badge/Render-Live%20API-46E3B7.svg?logo=render&logoColor=white)](https://billflow-api-bsxr.onrender.com/health)
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D20.0.0-brightgreen.svg)](https://nodejs.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Tests Passing](https://img.shields.io/badge/tests-36%20passing-success.svg)](tests/)
+
+🌐 **Live Production API**: [`https://billflow-api-bsxr.onrender.com`](https://billflow-api-bsxr.onrender.com)  
+🩺 **Health Endpoint**: [`https://billflow-api-bsxr.onrender.com/health`](https://billflow-api-bsxr.onrender.com/health)
 
 ---
 
