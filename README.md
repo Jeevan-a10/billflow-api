@@ -8,8 +8,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Tests Passing](https://img.shields.io/badge/tests-36%20passing-success.svg)](tests/)
 
-🌐 **Live Production API**: [`https://billflow-api-bsxr.onrender.com`](https://billflow-api-bsxr.onrender.com)  
-🩺 **Health Endpoint**: [`https://billflow-api-bsxr.onrender.com/health`](https://billflow-api-bsxr.onrender.com/health)
+🌐 **Live Production API (Render)**: [`https://billflow-api-bsxr.onrender.com`](https://billflow-api-bsxr.onrender.com)  
+🩺 **API Health Check**: [`https://billflow-api-bsxr.onrender.com/health`](https://billflow-api-bsxr.onrender.com/health)  
+💻 **Live Frontend Dashboard (Vercel)**: [`https://billflow-dashboard.vercel.app`](https://billflow-dashboard.vercel.app)
 
 ---
 
